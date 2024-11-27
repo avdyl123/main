@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Example</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+    
+        .static-box {
+            background-color: #3498db;
+            position: static;
+        }
+
+       
+        .relative-box {
+            background-color: #2ecc71;
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+
+       
+        .absolute-box {
+            background-color: #e74c3c;
+            position: absolute;
+            top: 200px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div class="box static-box">
+        Static Position
+    </div>
+    <div class="box relative-box">
+        Relative Position
+    </div>
+    <div class="box absolute-box">
+        Absolute Position
+    </div>
+
+</body>
+</html>
