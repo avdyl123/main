@@ -104,3 +104,52 @@ nav ul li.active{
     font-size: 16px;
     line-height: 26px;
 }
+
+#section-3{
+    background-color: #3c5499;
+    min-height: 820px;
+    color: white;
+}
+
+#contact-form{
+    max-height: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-row{
+    display: flex;
+}
+
+input[type="text"], input[text="email"], textarea{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color:#3c5499 ;
+    border: none;
+    font-size: 18px;
+    margin: 16px;
+    border-radius: 5px;
+    padding-left: 26px;
+}
+
+textarea{
+    height: 200px;
+    width: 100%;
+    padding-top: 24px;
+}
+
+input[type="submit"]{
+    background-color: #30bae7;
+    border: none;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+
+.big-button{
+    padding: 25px 85px;
+    color: white;
+
+}
