@@ -153,3 +153,28 @@ input[type="submit"]{
     color: white;
 
 }
+
+footer{
+    background-color: #344b8e;
+
+}
+
+.footer-links{
+    max-width: 945px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer ul{
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
