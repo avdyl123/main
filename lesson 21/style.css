@@ -4,3 +4,10 @@
         color: white;
     }
 }
+
+@media all and (max-width: 600px){
+    body{
+        background: #00004e;
+        color: white;
+    }
+}
