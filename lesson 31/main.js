@@ -29,3 +29,35 @@ console.log("----------");
 for(var i=0; i<5; i++){
      console.log("value of i is: " + i);
 }
+
+console.log("----------");
+
+
+var person={firstNmae: "Anid", lastName: "Kabashi" , age: 15};
+
+var text= '';
+var z;
+
+for(z in person){
+    text += person [z];
+}
+console.log(text);
+
+console.log("----------");
+
+var names =['Festa,' , 'Ardit' ,'Erand'];
+
+var y;
+
+for(y of names){
+    console.log(y);
+}
+
+console.log("----------");
+
+var txt = "Javascript";
+var l;
+ for(l of txt){
+    console.log(l);
+ }
+
