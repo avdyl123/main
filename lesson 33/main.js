@@ -1,54 +1,42 @@
-function validation(){
-    var name=document.getElementById("name").value;
+function validation() {
+    var name = document.getElementById("name").value.trim();
+    var age = document.getElementById("age").value.trim();
+    var city = document.getElementById("city").value.trim();
 
-    var valid_name_regex=/^[A-Za-z]+$/;
+    var valid_name_regex = /^[A-Za-z]+$/;
+    var valid_age_regex = /^[0-9]+$/;
 
-    var age=document.getElementById("age").value;
+    var isValid = true;
 
-    var valid_age_regex=/^[0-9]+$/;
-
-    var city=document.getElementById("city").vlaue;
-
-    if(!(name.match(valid_name_regex))|| (age.match(valid_age_regex))|| (city == "")){
-
-        if(!(name.match(valid_age_regex))){
-            document.getElementById("name_error").style.visibility="visible";
-            document.getElementById("name").style.borderColor="black";
-        }
-        else{
-            document.getElementById("name_error").style.visibility="hidden";
-            document.getElementById("name").style.borderColor="black";
-        
-        if(!(age.match(valid_age_regex))){
-        document.getElementById("name_error").style.visibility="visible";
-        document.getElementById("name").style.borderColor="black";
-        }
-        
-        else{
-            document.getElementById("age_error").style.visibility="hidden";
-            document.getElementById("age").style.borderColor="black";
-        }
-        if(city ==""){
-            document.getElementById("city_error").style.visibility="visible";
-            document.getElementById("city").style.borderColor="black";
-            }
-            
-            else{
-                document.getElementById("city_error").style.visibility="hidden";
-                document.getElementById("city").style.borderColur="black";
-            }
-           return false;
-       
-
-        }else{
-            document.getElementById("name_error").style.visibility="hidden"
-            document.getElementById("name").style.borderColor="black";
-            document.getElementById("age_error").style.visibility="hidden";
-            document.getElementById("age").style.borderColor="black";
-            document.getElementById("city_error").style.visibility="hidden";
-            document.getElementById("city").style.borderColor+"black";
-            return true;
-        }
-
+    // Name validation
+    if (!valid_name_regex.test(name)) {
+        document.getElementById("name_error").style.visibility = "visible";
+        document.getElementById("name").style.borderColor = "red";
+        isValid = false;
+    } else {
+        document.getElementById("name_error").style.visibility = "hidden";
+        document.getElementById("name").style.borderColor = "black";
     }
+
+    // Age validation
+    if (!valid_age_regex.test(age)) {
+        document.getElementById("age_error").style.visibility = "visible";
+        document.getElementById("age").style.borderColor = "red";
+        isValid = false;
+    } else {
+        document.getElementById("age_error").style.visibility = "hidden";
+        document.getElementById("age").style.borderColor = "black";
+    }
+
+    // City validation
+    if (city === "") {
+        document.getElementById("city_error").style.visibility = "visible";
+        document.getElementById("city").style.borderColor = "red";
+        isValid = false;
+    } else {
+        document.getElementById("city_error").style.visibility = "hidden";
+        document.getElementById("city").style.borderColor = "black";
+    }
+
+    return isValid;
 }
